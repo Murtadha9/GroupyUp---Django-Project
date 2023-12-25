@@ -1,3 +1,3 @@
 #GruoyUp - 
 
-inspired by The Clever one Dennis Ivy [](https://www.youtube.com/@DennisIvy)
+inspired by The Clever one Dennis Ivy [Dennis Ivy](https://www.youtube.com/@DennisIvy)
