@@ -1,4 +1,4 @@
-#GruopyUp - Django Project
+# GruopyUp - Django Project
 
 inspired by The Clever one Dennis Ivy [Dennis Ivy](https://www.youtube.com/@DennisIvy)
 
@@ -18,7 +18,7 @@ envname\scripts\activate
 ```
 pip install -r requirements.txt
 ```
-#Running the App
+# Running the App
 ```
 python manage.py runserver
 ```
