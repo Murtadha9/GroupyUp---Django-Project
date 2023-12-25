@@ -1,0 +1,53 @@
+
+
+{% load static %}
+<header class="header header--loggedIn">
+    <div class="container">
+        <a href="{% url 'home' %}" class="header__logo">
+            <i class="fa-solid fa-school" style="font-size: 24px"></i>
+            <h1>GroupyUp</h1>
+        </a>
+        <form class="header__search" method="GET" action="{% url 'home' %}">
+            <label>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input name="q" placeholder="Search for posts" />
+            </label>
+        </form>
+        <nav class="header__menu">
+
+
+            <!-- Logged In -->
+            {% if request.user.is_authenticated %}
+            <div class="header__user">
+                <a href="{% url 'update-user' %}">
+                    <div class="avatar avatar--medium active">
+                        <img src="{{request.user.avatar.url}}" />
+                    </div>
+                    <p>{{request.user.username}} <span>@{{request.user.username}}</span></p>
+                </a>
+                <button class="dropdown-button">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+            </div>
+            {% else %}
+
+            <!-- Not Logged In -->
+            <a href="{% url 'login' %}">
+                <img src="{% static 'images/avatar.svg' %}" />
+                <p>Login</p>
+            </a>
+            {% endif %}
+
+            <div class="dropdown-menu">
+                <a href="{% url 'update-user' %}" class="dropdown-link">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings</a>
+                <a href="{% url 'logout' %}" class="dropdown-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
